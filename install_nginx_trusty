@@ -1,0 +1,6 @@
+echo 'deb http://nginx.org/packages/ubuntu/ trusty nginx
+deb-src http://nginx.org/packages/ubuntu/ trusty nginx' | sudo tee -a /etc/apt/sources.list
+
+wget http://nginx.org/keys/nginx_signing.key
+sudo apt-key add nginx_signing.key
+sudo apt-get install nginx
