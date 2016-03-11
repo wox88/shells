@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 sudo mv /etc/apt/sources.list /etc/apt/sources.list_backup
-echo 'deb http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
-deb-src http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse' | sudo tee /etc/apt/sources.list
 
-sudo apt-get update
+echo 'deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+# deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse #Not for humans during development stage of release trusty
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+# deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse #Not for humans during development stage of release trusty
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse' | sudo tee /etc/apt/sources.list
+
 sudo apt-get upgrade
